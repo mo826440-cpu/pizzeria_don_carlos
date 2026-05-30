@@ -1,0 +1,193 @@
+
+/* Estilos para el body de la página (el body es el cuerpo de la página) */
+html {
+    scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en los enlaces del menú */
+  }
+
+body {
+    font-family: Arial, sans-serif; /* Fuente de la página */
+    background-color: #fff4e6; /* Color de fondo de la página */
+    margin: 0; /* Margen externo de la página */
+    padding: 0; /* Margen interno de la página */
+  }
+
+  /* Estilos para el header de la página (el header es el encabezado de la página) */
+  header {
+    background-color: #c0392b; /* Color de fondo del header */
+    color: white; /* Color del texto del header */
+    text-align: center; /* Centrar el texto */
+    padding: 1rem 2rem; /* Espacio interno del header */
+    /*max-width: 800px; /* Ancho máximo del header */
+    margin: 0 auto; /* Margen externo del header centrado */
+  }
+  
+  /* Estilos para el main de la página (el main es el contenido principal de la página) */
+  main {
+    padding: 3rem 2rem; /* Espacio interno del main */
+    /*max-width: 800px; /* Ancho máximo del main */
+    margin: 0 auto;  /* Margen externo del main */
+  }
+
+  /* Estilos para el h2 de la página (el h2 es el subtítulo de la página) */
+  h2 {
+    color: #c0392b; /* Color del texto del h2 */
+  }
+
+  /* Estilos del menú de navegación por secciones (Clásicas, Especiales, etc.) */
+  .menu-navegacion {
+    background-color: white; /* Fondo blanco para destacar el menú */
+    border: 2px solid #e0e0e0; /* Borde gris claro */
+    border-radius: 10px; /* Esquinas redondeadas */
+    padding: 15px; /* Espacio interno */
+    margin-bottom: 25px; /* Separación antes de la primera categoría */
+    text-align: center; /* Centra los enlaces */
+  }
+
+  .menu-navegacion p {
+    margin-top: 0; /* Sin margen arriba del texto "Ir a la sección:" */
+    color: #555; /* Gris para el texto introductorio */
+    font-weight: bold; /* Texto en negrita */
+  }
+
+  .menu-navegacion a {
+    display: inline-block; /* Permite dar padding y que queden en fila */
+    margin: 5px 8px; /* Espacio entre cada enlace */
+    padding: 8px 14px; /* Área clickeable más cómoda */
+    background-color: #c0392b; /* Rojo igual al header */
+    color: white; /* Texto blanco */
+    text-decoration: none; /* Quita el subrayado por defecto de los links */
+    border-radius: 5px; /* Esquinas redondeadas en cada botón-link */
+  }
+
+  .menu-navegacion a:hover {
+    background-color: #a93226; /* Rojo más oscuro al pasar el mouse */
+  }
+
+  /* Estilos para cada <section>: agrupa una categoría del menú (Clásicas, Bebidas, etc.) */
+  section {
+    margin-bottom: 30px; /* Separación vertical entre una categoría y la siguiente */
+    scroll-margin-top: 15px; /* Deja un pequeño margen al saltar con el enlace #id */
+  }
+
+  /* Categorías colapsables: empiezan cerradas y se abren con la flecha */
+  .categoria {
+    background-color: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+  }
+
+  /* Botón con flecha + nombre de la categoría (Clásicas, Bebidas, etc.) */
+  .categoria-boton {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    background-color: white;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e67e22;
+    text-align: left;
+  }
+
+  .categoria-boton:hover {
+    background-color: #fff8f0; /* Fondo suave al pasar el mouse */
+  }
+
+  /* Flecha del acordeón: ▶ cerrado, gira 90° cuando la categoría está abierta */
+  .flecha {
+    display: inline-block;
+    transition: transform 0.2s;
+    font-size: 0.9rem;
+  }
+
+  .categoria.abierta .flecha {
+    transform: rotate(90deg);
+  }
+
+  .categoria.abierta .categoria-boton {
+    border-bottom-color: #e67e22; /* Línea naranja bajo el título cuando está abierta */
+  }
+
+  /* Contenido de productos: oculto por defecto */
+  .categoria-contenido {
+    display: none;
+    padding: 15px;
+  }
+
+  /* Cuando la section tiene class="abierta", se muestra el contenido */
+  .categoria.abierta .categoria-contenido {
+    display: block;
+  }
+
+  /* Estilos del <h4> dentro de cada tarjeta: es el nombre del producto */
+  .pizza h4 {
+    margin-top: 0; /* Quita margen superior extra del título del producto */
+    color: #333; /* Gris oscuro para el nombre de la pizza o bebida */
+  }
+  
+  /* Estilos para las tarjetas de producto (.pizza sirve para pizzas y bebidas) */
+  .pizza {
+    background-color: white; /* Color de fondo de la caja */
+    border: 2px solid #e0e0e0; /* Color del borde de la caja */
+    border-radius: 10px; /* Redondear los bordes de la caja */
+    padding: 15px; /* Espacio interno de la caja (relleno) */
+    margin-bottom: 15px; /* Espacio exterior de la caja (margen) */
+  }
+  
+  /* Estilos solo para los botones "Pedir" dentro de cada tarjeta .pizza (verde) */
+  .pizza button {
+    background-color: #27ae60; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Eliminar el borde del botón */
+    padding: 10px 15px; /* Espacio interno del botón (relleno) */
+    border-radius: 5px; /* Redondear los bordes del botón */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse sobre el botón */
+  }
+
+  .pizza button:hover {
+    background-color: #219150; /* Verde más oscuro al pasar el mouse */
+  }
+  
+  /* Estilos para el footer de la página (el footer es el pie de la página) */
+  footer {
+    background-color: #c0392b; /* Color de fondo */
+    color: white; /* Color del texto */
+    text-align: center; /* Centrar el texto */
+    padding: 10px; /* Espacio interno del footer */
+    margin-top: 20px; /* Espacio exterior del footer (margen) */
+  }
+
+  .pedidos {
+    background-color: white; /* Color de fondo de la caja de pedidos */
+    color: #333; /* Color del texto de la caja de pedidos */
+    text-align: center; /* Centrar el texto */
+    padding: 15px; /* Espacio interno de la caja de pedidos */
+    border: 2px solid #e0e0e0; /* Borde gris claro */
+    border-radius: 10px; /* Redondear los bordes de la caja de pedidos */
+    margin-bottom: 30px; /* Separación vertical entre la caja de pedidos y la siguiente categoría */
+    max-width: 800px; /* Ancho máximo de la caja de pedidos */
+    margin: 0 auto; /* Margen externo de la caja de pedidos */
+    display: flex; /* Display flex para alinear los elementos horizontalmente dentro de la caja de pedidos */
+    justify-content: space-between; /* Espacio entre los elementos dentro de la caja de pedidos */
+    align-items: center; /* Centrar los elementos verticalmente dentro de la caja de pedidos */
+   }
+
+  /* Botón "Limpiar pedidos" dentro de la sección .pedidos (rojo) */
+  .pedidos button {
+    background-color: #c0392b; /* Rojo igual al header */
+    color: white;
+    border: none; /* Eliminar el borde del botón */
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse sobre el botón */
+  }
+
+  .pedidos button:hover {
+    background-color: #a93226; /* Rojo más oscuro al pasar el mouse */
+  }

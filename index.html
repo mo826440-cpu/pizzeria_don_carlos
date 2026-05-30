@@ -1,0 +1,203 @@
+<!DOCTYPE html> <!-- Declara que el documento es HTML5 (obligatorio en la primera línea) -->
+
+<html lang="es"> <!-- Raíz del documento; lang="es" indica que el contenido está en español -->
+
+<head> <!-- Cabecera: información para el navegador (no se ve en la página) -->
+
+    <meta charset="UTF-8"> <!-- Permite usar tildes, eñes y caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Adapta la página a celulares y tablets -->
+    <title>Pizzería Don Carlos</title> <!-- Texto que aparece en la pestaña del navegador -->
+
+    <link rel="stylesheet" href="style.css"> <!-- Enlaza la hoja de estilos externa (style.css) -->
+</head>
+
+<body> <!-- Cuerpo: todo lo que el usuario ve en pantalla -->
+
+    <header> <!-- Encabezado visible: logo, nombre del local, eslogan -->
+        <h1>🍕 Pizzería Don Carlos</h1> <!-- Título principal de la página (solo debe haber uno) -->
+        <p>Las mejores pizzas de la ciudad</p> <!-- Subtítulo o frase de presentación -->
+    </header>
+
+
+    <main> <!-- Contenido principal del sitio (el menú de productos) -->
+
+        <h2>Nuestro Menú</h2> <!-- Título general de la zona de productos -->
+
+        <!-- Menú de navegación: enlaces que saltan a cada sección del menú -->
+        <nav class="menu-navegacion"> <!-- <nav> agrupa los links de navegación de la página -->
+            <p>Ir a la sección:</p>
+            <a href="#clasicas">Clásicas</a> <!-- href="#id" enlaza con el id de la <section> -->
+            <a href="#especiales">Especiales</a>
+            <a href="#vegetarianas">Vegetarianas</a>
+            <a href="#bebidas">Bebidas</a>
+        </nav>
+
+        <div id="lista-pedidos"> <!-- Contenedor para los pedidos -->
+
+            <!-- ========== CATEGORÍA: CLÁSICAS ========== -->
+            <section id="clasicas" class="categoria"> <!-- class="categoria" permite abrir/cerrar con la flecha -->
+                <button type="button" class="categoria-boton"> <!-- Botón que muestra u oculta los productos -->
+                    <span class="flecha">▶</span> <!-- Ícono flecha: apunta a la derecha (cerrado) o abajo (abierto) -->
+                    Clásicas
+                </button>
+                <div class="categoria-contenido"> <!-- Contenedor oculto hasta hacer clic en la flecha -->
+
+                <div class="pizza"> <!-- Tarjeta de un producto (la clase "pizza" la estiliza el CSS) -->
+                    <h4>Muzzarella</h4> <!-- Nombre del producto -->
+                    <p>Salsa de tomate, queso mozzarella y aceitunas. <span></span></p>
+                    <!-- Descripción corta de ingredientes -->
+                    <p><strong>$8.500</strong></p> <!-- Precio; <strong> lo muestra en negrita -->
+                    <button onclick="alert('Agregaste una pizza Muzzarella')"> <!-- Al hacer clic muestra un mensaje -->
+                        Pedir
+                    </button>
+                </div>
+
+                <div class="pizza">
+                    <h4>Napolitana</h4>
+                    <p>Queso, rodajas de tomate fresco y ajo.</p>
+                    <p><strong>$9.500</strong></p>
+                    <button onclick="alert('Agregaste una pizza Napolitana')">
+                        Pedir
+                    </button>
+                </div>
+
+                <div class="pizza">
+                    <h4>Fugazzeta</h4>
+                    <p>Mucha cebolla caramelizada y queso extra.</p>
+                    <p><strong>$9.900</strong></p>
+                    <button onclick="alert('Agregaste una pizza Fugazzeta')">
+                        Pedir
+                    </button>
+                </div>
+                </div> <!-- Fin de .categoria-contenido -->
+            </section>
+
+            <!-- ========== CATEGORÍA: ESPECIALES ========== -->
+            <section id="especiales" class="categoria">
+                <button type="button" class="categoria-boton">
+                    <span class="flecha">▶</span>
+                    Especiales
+                </button>
+                <div class="categoria-contenido">
+
+                <div class="pizza">
+                    <h4>Cuatro Quesos</h4>
+                    <p>Mozzarella, roquefort, provolone y parmesano.</p>
+                    <p><strong>$11.500</strong></p>
+                    <button onclick="alert('Agregaste una pizza Cuatro Quesos')">
+                        Pedir
+                    </button>
+                </div>
+
+                <div class="pizza">
+                    <h4>Provenzal</h4>
+                    <p>Jamón cocido, morrón asado, huevo y aceitunas.</p>
+                    <p><strong>$10.800</strong></p>
+                    <button onclick="alert('Agregaste una pizza Provenzal')">
+                        Pedir
+                    </button>
+                </div>
+
+                <div class="pizza">
+                    <h4>Calabresa</h4>
+                    <p>Salami picante, mozzarella y aceitunas negras.</p>
+                    <p><strong>$11.200</strong></p>
+                    <button onclick="alert('Agregaste una pizza Calabresa')">
+                        Pedir
+                    </button>
+                </div>
+                </div>
+            </section>
+
+            <!-- ========== CATEGORÍA: VEGETARIANAS ========== -->
+            <section id="vegetarianas" class="categoria">
+                <button type="button" class="categoria-boton">
+                    <span class="flecha">▶</span>
+                    Vegetarianas
+                </button>
+                <div class="categoria-contenido">
+
+                <div class="pizza">
+                    <h4>Caprese</h4>
+                    <p>Tomate, mozzarella fresca, albahaca y aceite de oliva.</p>
+                    <p><strong>$10.500</strong></p>
+                    <button onclick="alert('Agregaste una pizza Caprese')">
+                        Pedir
+                    </button>
+                </div>
+
+                <div class="pizza">
+                    <h4>Champiñones</h4>
+                    <p>Champiñones salteados, ajo, perejil y queso.</p>
+                    <p><strong>$9.800</strong></p>
+                    <button onclick="alert('Agregaste una pizza Champiñones')">
+                        Pedir
+                    </button>
+                </div>
+
+                <div class="pizza">
+                    <h4>Veggie</h4>
+                    <p>Morrón, cebolla, zapallito verde y aceitunas.</p>
+                    <p><strong>$10.200</strong></p>
+                    <button onclick="alert('Agregaste una pizza Veggie')">
+                        Pedir
+                    </button>
+                </div>
+                </div>
+            </section>
+
+            <!-- ========== CATEGORÍA: BEBIDAS ========== -->
+            <section id="bebidas" class="categoria">
+                <button type="button" class="categoria-boton">
+                    <span class="flecha">▶</span>
+                    Bebidas
+                </button>
+                <div class="categoria-contenido">
+
+                <div class="pizza">
+                    <h4>Gaseosa 500 ml</h4>
+                    <p>Coca-Cola, Sprite o Fanta bien fría.</p>
+                    <p><strong>$2.500</strong></p>
+                    <button onclick="alert('Agregaste una Gaseosa 500 ml')">
+                        Pedir
+                    </button>
+                </div>
+
+                <div class="pizza">
+                    <h4>Agua mineral</h4>
+                    <p>Con o sin gas, botella de 500 ml.</p>
+                    <p><strong>$1.800</strong></p>
+                    <button onclick="alert('Agregaste un Agua mineral')">
+                        Pedir
+                    </button>
+                </div>
+
+                <div class="pizza">
+                    <h4>Cerveza artesanal</h4>
+                    <p>Rubia o roja, lata de 473 ml.</p>
+                    <p><strong>$4.500</strong></p>
+                    <button onclick="alert('Agregaste una Cerveza artesanal')">
+                        Pedir
+                    </button>
+                </div>
+                </div>
+            </section>
+        </div>
+
+        <section id="pedidos" class="pedidos">
+            <p>Pedidos realizados: <span id="contador-pedidos">0</span></p>
+            <button onclick="limpiarPedidos(); alert('Se han cancelado todos los pedidos')">Limpiar Pedidos</button>
+        </section>
+
+    </main>
+
+    <footer> <!-- Pie de página: datos de contacto y ubicación -->
+        <p>📍 Córdoba, Argentina | ☎ 351-123456</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

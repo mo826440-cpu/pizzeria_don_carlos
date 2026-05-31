@@ -13,12 +13,40 @@ body {
 
   /* Estilos para el header de la página (el header es el encabezado de la página) */
   header {
+    position: relative; /* Permite posicionar la pizza animada dentro del header */
+    overflow: hidden; /* Oculta la imagen cuando sale por los bordes */
     background-color: #c0392b; /* Color de fondo del header */
     color: white; /* Color del texto del header */
     text-align: center; /* Centrar el texto */
     padding: 1rem 2rem; /* Espacio interno del header */
-    /*max-width: 800px; /* Ancho máximo del header */
     margin: 0 auto; /* Margen externo del header centrado */
+  }
+
+  .header-contenido {
+    position: relative; /* Mantiene el texto en su capa */
+    z-index: 1; /* El título y subtítulo quedan por encima de la pizza */
+  }
+
+  /* Pizza que corre de derecha a izquierda en el header */
+  .pizza-animada {
+    position: absolute; /* Se mueve libremente dentro del header */
+    top: 50%; /* Centrada verticalmente */
+    transform: translateY(-50%);
+    height: 180px; /* Tamaño de la imagen */
+    width: auto;
+    animation: pizza-corre 8s linear infinite; /* Movimiento continuo, 8 segundos por recorrido */
+    pointer-events: none; /* No interfiere con clics en el header */
+    z-index: 0;
+  }
+
+  /* Animación: entra por la derecha y sale por la izquierda */
+  @keyframes pizza-corre {
+    100% {
+      left: 100%; /* Empieza fuera, en la esquina derecha */
+    }
+    0% {
+      left: -100px; /* Termina fuera, en la esquina izquierda */
+    }
   }
   
   /* Estilos para el main de la página (el main es el contenido principal de la página) */

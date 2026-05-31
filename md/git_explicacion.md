@@ -60,3 +60,39 @@ bash git log
 Lo importante es que cada commit es un punto seguro al que puedes volver. Mientras hagas commits con frecuencia y con mensajes claros, tu trabajo siempre va a estar protegido, incluso si experimentas con un color chocolate en el header que termina viéndose horrible.
 
 Git tiene mucho más por explorar: ramas, viajes en el tiempo, deshacer cambios y trabajo colaborativo. Todo eso lo encuentras en el curso completo de Git en Platzi, que te recomiendo tomar después. Por ahora ya tienes lo necesario para el siguiente paso: subir tu repositorio a GitHub y respaldar tu máquina del tiempo en la nube. Cuéntame en los comentarios cuál fue tu primer mensaje de commit.
+
+RESUMEN DEL USO DE LOS COMANDOS DE GIT:
+
+git init: inicializa un nuevo repositorio local.
+
+git add: agrega archivos al área de staging. (el área de staging es una zona temporal donde se guardan los archivos que se van a subir a la nube)
+
+git add .: agrega todos los archivos al área de staging.
+
+git commit: crea un nuevo commit con los archivos que se encuentra en el área de staging. (el commit es un snapshot de los archivos que se encuentran en el área de staging)
+
+git push: sube los archivos al repositorio remoto. (el repositorio remoto es una copia de seguridad de los archivos que se encuentran en el repositorio local)
+
+git pull: descarga los archivos del repositorio remoto. 
+
+git status: muestra el estado de los archivos en el repositorio local.
+
+git branch: muestra las ramas del repositorio. (las ramas son como copias del repositorio local, se usan para trabajar en paralelo y luego fusionar las ramas en la rama principal)
+
+git checkout: cambia de rama. (se usa para cambiar de rama y trabajar en ella)
+
+git merge: fusiona una rama en la rama principal.
+
+git log: muestra el historial de commits. (el historial de commits es el registro de los cambios que se han realizado)
+
+git clone: clona un repositorio remoto. (se usa para clonar un repositorio remoto y trabajar en él localmente), o sea, se crea una copia del repositorio remoto y se guarda en el repositorio local.
+
+git remote add origin: agrega un repositorio remoto. (se usa para agregar un repositorio remoto a la lista de repositorios remotos)
+
+git remote: muestra la lista de repositorios remotos. (la lista de repositorios remotos es la lista de repositorios remotos que se encuentra en el repositorio local)
+
+git remote remove origin: elimina un repositorio remoto. (se usa para eliminar un repositorio remoto de la lista de repositorios remotos)
+
+git remote set.url origin: cambia la url del repositorio remoto. (la url es la direccion donde se encuentra el repositorio remoto en la nube)
+
+git revert: deshace un commit. (se usa para deshacer un commit y volver al estado anterior, es como usar Ctrl + Z en el editor de texto)
